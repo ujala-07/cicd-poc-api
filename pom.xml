@@ -4,7 +4,7 @@
 
 	<groupId>1767fe33-31ca-4acd-bfb1-c7130a76991a</groupId>
 	<artifactId>cicd-poc-api</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>mule-application</packaging>
 
 	<name>cicd-poc-api</name>
