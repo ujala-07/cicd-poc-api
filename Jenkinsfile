@@ -33,7 +33,7 @@ pipeline {
 			}
 			steps {
 				configFileProvider([configFile(fileId: "MVN_GLBL_SETT_ID", variable: 'MAVEN_SETTINGS_XML')]) {
-					bat 'mvn -s "%MAVEN_SETTINGS_XML%" -DskipTests clean deploy -DmuleDeploy -DgrantType="client_credentials" -DclientId="%DEPLOY_CREDS_USR%" -DclientSecret="%DEPLOY_CREDS_PSW%" --Dcloudhub.application.name="%APP_NAME%" -Denvironment="%ENVIRONMENT%" -DworkerType="%WORKER%" -Danypoint.platform.client_id="%ENVIRONMENT_CREDS_USR%" -Danypoint.platform.client_secret="%ENVIRONMENT_CREDS_PSW%" -Dmule.key="%MULE_KEY%"'
+					bat 'mvn -s "%MAVEN_SETTINGS_XML%" -DskipTests clean deploy -DmuleDeploy -DgrantType="client_credentials" -DclientId="%DEPLOY_CREDS_USR%" -DclientSecret="%DEPLOY_CREDS_PSW%" -Dcloudhub.application.name="%APP_NAME%" -Denvironment="%ENVIRONMENT%" -DworkerType="%WORKER%" -Danypoint.platform.client_id="%ENVIRONMENT_CREDS_USR%" -Danypoint.platform.client_secret="%ENVIRONMENT_CREDS_PSW%" -Dmule.key="%MULE_KEY%"'
 				}
 				echo "Deployed to Development"
 			}
